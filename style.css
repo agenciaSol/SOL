@@ -148,8 +148,8 @@ footer {
 /* Fotos e depoimentos */
 .foto {
   background-color: #d99543;
-  width: 80px;
-  height: 80px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   margin: 0 auto 1rem;
   display: flex;
