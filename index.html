@@ -169,7 +169,7 @@
   }
 </script>
 
-<button class="toggle-dark" id="toggle-dark-btn">🌙</button>
+
 
 <script>
   const btn = document.getElementById('toggle-dark-btn');
@@ -183,16 +183,7 @@
     btn.textContent = '🌙';
   }
 
-  btn.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-      btn.textContent = '☀️';
-      localStorage.setItem('dark-mode', 'enabled');
-    } else {
-      btn.textContent = '🌙';
-      localStorage.setItem('dark-mode', 'disabled');
-    }
-  });
+ 
 </script>
 
 </body>
