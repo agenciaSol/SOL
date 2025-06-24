@@ -15,12 +15,18 @@
 <body>
 
   <header>
-    <div class="logo"><img src="Sol.jpeg" alt="Logo" width="100px" he></div>
+   <div class="logo">
+  <img src="Sol-removebg-preview.png" alt="Logo Claro" class="light" />
+  <img src="2-removebg-preview.png" alt="Logo Escuro" class="dark" />
+</div>
+
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#recursos">Serviços</a>
       <a href="#contato">Contato</a> 
     </nav>
+    <button class="toggle-dark" onclick="toggleDarkMode()">🌙</button>
+
   </header>
 
   <section class="hero">
@@ -31,8 +37,10 @@
         <a href="#sobre" class="botao">SAIBA MAIS</a>
       </div>
       <div class="hero-imagem">
-        <img src="sol2.png" alt="Ilustração de luz" >
-      </div>
+  <img src="sol2-removebg-preview.png" alt="Ilustração clara" class="light" />
+  <img src="1-removebg-preview.png" alt="Ilustração escura" class="dark" />
+</div>
+
     </div>
   </section>
 
@@ -115,6 +123,38 @@
       
     </div>
   </footer>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+
+<button class="toggle-dark" id="toggle-dark-btn">🌙</button>
+
+<script>
+  const btn = document.getElementById('toggle-dark-btn');
+  const body = document.body;
+
+  // Carrega o modo salvo
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+    body.classList.add('dark-mode');
+    btn.textContent = '☀️';
+  } else {
+    btn.textContent = '🌙';
+  }
+
+  btn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+      btn.textContent = '☀️';
+      localStorage.setItem('dark-mode', 'enabled');
+    } else {
+      btn.textContent = '🌙';
+      localStorage.setItem('dark-mode', 'disabled');
+    }
+  });
+</script>
 
 </body>
 </html>
