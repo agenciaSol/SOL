@@ -27,7 +27,7 @@ header {
 }
 
 .logo img {
-  width: 70px;
+  width: 160px;
 }
 
 nav {
@@ -364,4 +364,9 @@ body.dark-mode .hero-imagem img.dark {
 
 
 
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+  }
+}
 
